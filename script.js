@@ -49,11 +49,6 @@ getDayData();
 //Step 3 - Loop through all holidays for the current month
 //Step 4 - Put them on the page in the correct place
 
-
-
-
-
-
 function openModal(date) {
   clicked = date;
 
