@@ -2,8 +2,10 @@ body {
     display: flex;
     margin-top: 50px;
     justify-content: center;
-    background-color: #FFFCFF;
+    background: rgb(0,0,0);
+    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
   }
+
   button {
     width: 75px;
     cursor: pointer;
@@ -12,19 +14,19 @@ body {
     outline: none;
     padding: 5px;
     border-radius: 5px;
-    color: white;
+    color: black;
   }
   
   #header {
     padding: 10px;
-    color: #d36c6c;
-    font-size: 26px;
+    color: white;
+    font-size: 36px;
     font-family: sans-serif;
     display: flex;
     justify-content: space-between;
   }
   #header button {
-    background-color:#92a1d1;
+    background-color: lightblue;
   }
   #container {
     width: 770px;
@@ -32,8 +34,9 @@ body {
   #weekdays {
     width: 100%;
     display: flex;
-    color: #247BA0;
+    color: white;
   }
+  
   #weekdays div {
     width: 100px;
     padding: 10px;
