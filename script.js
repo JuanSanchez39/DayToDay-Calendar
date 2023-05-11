@@ -9,6 +9,51 @@ const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
 
+// API Add in 
+async function apiRequest() {
+  var response = await fetch("https://date.nager.at/api/v3/publicholidays/2023/US");
+  var jsonData = await response.json();
+  return jsonData;
+}
+
+async function getMonthData() {
+  var data = await apiRequest();
+  var filterData = [];
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i].date[5] + data[i].date[6]);
+    if (data[i].date[5] + data[i].date[6] === "05") {
+      filterData.push(data[i])
+    }
+  }
+  console.log(filterData);
+}
+
+getMonthData();
+
+async function getDayData() {
+  var data = await apiRequest();
+  var filterData = [];
+  for (let i = 0; i < data.length; i++) {
+    console.log(data[i].date[5] + data[i].date[6]);
+    if (data[i].date[8] + data[i].date[9] === "29") {
+      filterData.push(data[i])
+    }
+  }
+  console.log(filterData);
+}
+
+getDayData();
+
+
+//Step 2 - Filter out holidays not in the current month
+//Step 3 - Loop through all holidays for the current month
+//Step 4 - Put them on the page in the correct place
+
+
+
+
+
+
 function openModal(date) {
   clicked = date;
 
@@ -37,7 +82,7 @@ function load() {
 
   const firstDayOfMonth = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
-  
+
   const dateString = firstDayOfMonth.toLocaleDateString('en-us', {
     weekday: 'long',
     year: 'numeric',
@@ -46,12 +91,12 @@ function load() {
   });
   const paddingDays = weekdays.indexOf(dateString.split(', ')[0]);
 
-  document.getElementById('monthDisplay').innerText = 
+  document.getElementById('monthDisplay').innerText =
     `${dt.toLocaleDateString('en-us', { month: 'long' })} ${year}`;
 
   calendar.innerHTML = '';
 
-  for(let i = 1; i <= paddingDays + daysInMonth; i++) {
+  for (let i = 1; i <= paddingDays + daysInMonth; i++) {
     const daySquare = document.createElement('div');
     daySquare.classList.add('day');
 
@@ -77,7 +122,7 @@ function load() {
       daySquare.classList.add('padding');
     }
 
-    calendar.appendChild(daySquare);    
+    calendar.appendChild(daySquare);
   }
 }
 
