@@ -8,6 +8,11 @@ const deleteEventModal = document.getElementById('deleteEventModal');
 const backDrop = document.getElementById('modalBackDrop');
 const eventTitleInput = document.getElementById('eventTitleInput');
 const weekdays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const monthNumbers = {
+  january: 01,
+  february: 02,
+  march: 03,
+}
 
 // API Add in 
 async function apiRequest() {
@@ -64,7 +69,7 @@ function openModal(date) {
   backDrop.style.display = 'block';
 }
 
-function load() {
+async function load() {
   const dt = new Date();
 
   if (nav !== 0) {
@@ -74,6 +79,17 @@ function load() {
   const day = dt.getDate();
   const month = dt.getMonth();
   const year = dt.getFullYear();
+
+  var data = await apiRequest();
+  var monthHolidays = {}
+  function getHolidays(monthNum) {
+    const holidayArr = data.filter(holidayObj => holidayObj.date.split('-')[1] == monthNum);
+    holidayArr.forEach(holidayObj => {
+      monthHolidays[`${holidayObj.date.split('-')[2]}`] = holidayObj.localName;
+    });
+  };
+  let monthNum = month < 9 ? `0${month + 1}` : month + 1;
+  getHolidays(monthNum);
 
   const firstDayOfMonth = new Date(year, month, 1);
   const daysInMonth = new Date(year, month + 1, 0).getDate();
@@ -117,6 +133,14 @@ function load() {
       daySquare.classList.add('padding');
     }
 
+    for(const date in monthHolidays){
+      if(date == i - paddingDays){
+        const holidayText = document.createElement('span');
+        holidayText.innerText = monthHolidays[date];
+        daySquare.appendChild(holidayText);
+      };
+    };
+    
     calendar.appendChild(daySquare);
   }
 }
