@@ -14,7 +14,7 @@ const monthNumbers = {
   march: 03,
 }
 
-// API Add in 
+
 async function apiRequest() {
   var response = await fetch("https://date.nager.at/api/v3/publicholidays/2023/US");
   var jsonData = await response.json();
