@@ -126,3 +126,29 @@ body {
     position: absolute;
     background-color: rgba(0,0,0,0.8);
   }
+
+  /*added styling to NASA API data container*/
+
+ .container2 {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 2rem;
+  color:#CBD4C2
+}
+
+.picture-explanation-container {
+  display: flex;
+}
+
+#picture {
+  width: 50%;
+  margin-right: 1rem;
+}
+
+#explanation {
+  letter-spacing: 0px;
+  line-height: 20px;
+}
+
+
