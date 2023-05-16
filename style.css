@@ -148,6 +148,9 @@ body {
 
 .picture-explanation-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  text-size-adjust: auto;
 }
 
 #picture {
@@ -159,7 +162,13 @@ body {
 #explanation {
   letter-spacing: 0px;
   line-height: 20px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  text-size-adjust: auto;
+  margin: 45px
 }
+
 @media (max-width: 740px) {
   .box {
     width: 48%;
