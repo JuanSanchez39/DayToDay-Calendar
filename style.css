@@ -1,6 +1,6 @@
 body {
     display: flex;
-    margin-top: 50px;
+    margin-top: 30px;
     justify-content: center;
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
@@ -15,7 +15,6 @@ body {
     padding: 5px;
     border-radius: 5px;
     color: black;
-    
   }
   
   #header {
@@ -25,11 +24,11 @@ body {
     font-family: sans-serif;
     display: flex;
     justify-content: space-between;
-    margin: 50px;
+    margin: 30px;
   }
   #header button {
     background-color: lightblue;
-    margin: 50px;
+    margin-right: 100px;
   }
   #container {
     width: 770px;
@@ -39,7 +38,7 @@ body {
     width: 100%;
     display: flex;
     color: white;
-    margin: 50px;
+    margin: 45px;
     font-size: larger;
   }
   
@@ -61,13 +60,14 @@ body {
     cursor: pointer;
     box-sizing: border-box;
     background-color: white;
-    margin: 5px;
+    margin: 3px;
     box-shadow: 0px 0px 3px #CBD4C2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     border-radius: 5px;
     border-style: solid;
+    box-shadow: 20px 20px 50px black;
   }
   .day:hover {
     background-color: #e8faed;
@@ -157,16 +157,19 @@ body {
   width: 50%;
   margin-right: 1rem;
   border-radius: 7px;
+  border-style: groove black;
+  box-shadow: 20px 20px 50px black;
 }
 
 #explanation {
   letter-spacing: 0px;
   line-height: 20px;
-  display: flex;
-  justify-content: flex-start;
-  flex-wrap: wrap;
-  text-size-adjust: auto;
-  margin: 45px
+  text-align: center;
+  margin: 45px;
+  border-style: solid black;
+  border-radius: 7px;
+  box-shadow: 20px 20px 50px 10px black inset;
+  
 }
 
 @media (max-width: 740px) {
