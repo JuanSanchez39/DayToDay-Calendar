@@ -29,6 +29,7 @@ body {
   #header button {
     background-color: lightblue;
     margin-right: 100px;
+
   }
   #container {
     width: 770px;
@@ -143,7 +144,7 @@ body {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 2rem;
-  color:#CBD4C2
+  color:#CBD4C2;
 }
 
 .picture-explanation-container {
@@ -178,4 +179,5 @@ body {
   }
 }
 
+@import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
 
