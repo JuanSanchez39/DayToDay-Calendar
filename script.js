@@ -58,7 +58,8 @@ function openModal(date) {
   clicked = date;
 
   const eventForDay = events.find(e => e.date === clicked);
-
+//Step 1: create a HTML <p> tag, give it an id.
+//Step 2: set the text content of the <p> tag to be the clicked variable.
   if (eventForDay) {
     document.getElementById('eventText').innerText = eventForDay.title;
     deleteEventModal.style.display = 'block';
