@@ -1,3 +1,8 @@
+html{
+  background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
+  overflow-y: hidden;
+}
+
 body {
     display: flex;
     margin-top: 30px;
@@ -53,12 +58,7 @@ body {
     margin: 50px;
     display: flex;
     flex-wrap: wrap;
-  /*Added Pointer cursor for the mouse when scrolling over calendar. Have to fix syntax error*/
-    <style> 
-    tr: hover{
-      cursor: pointer;
-    }
-    </style>
+   cursor: pointer;
   }
 
   .day {
