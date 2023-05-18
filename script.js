@@ -49,6 +49,17 @@ async function getDayData() {
 
 getDayData();
 
+//Back-to-Top button event listener//
+window.addEventListener('resize', function() {
+var backButton = document.querySelector('blaze-back-to-top');
+var isMobile = window.innerWidth <= 920;
+
+if (isMobile) {
+  backButton.style.display = 'block';
+} else {
+  backButton.style.display = 'none';
+}
+});
 
 //Step 2 - Filter out holidays not in the current month
 //Step 3 - Loop through all holidays for the current month
@@ -58,8 +69,7 @@ function openModal(date) {
   clicked = date;
 
   const eventForDay = events.find(e => e.date === clicked);
-//Step 1: create a HTML <p> tag, give it an id.
-//Step 2: set the text content of the <p> tag to be the clicked variable.
+
   if (eventForDay) {
     document.getElementById('eventText').innerText = eventForDay.title;
     deleteEventModal.style.display = 'block';
@@ -224,6 +234,4 @@ const displayData = data => {
 
 fetchNASAData()
 
-document.addEventListener("click", () => {
-  document.getElementById("test").play();
-})
+

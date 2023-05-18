@@ -2,6 +2,11 @@ html{
   background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
   overflow-y: hidden;
 }
+/*For img, video, and container to stay responsive for smaller screens*/
+img, video, #container {
+  max-width: 100%;
+  height: auto;
+}
 
 body {
     display: flex;
@@ -36,6 +41,7 @@ body {
     margin-right: 100px;
 
   }
+
   #container {
     width: 770px;
     
@@ -93,7 +99,7 @@ body {
     max-height: 55px;
     overflow: hidden;
   }
-  /* Added custom date changer*/
+  /* Added Foundation Framework custom date changer*/
   
 .mobile-app-filter-menu {
   display: -webkit-flex;
@@ -206,7 +212,7 @@ body {
   box-shadow: 20px 20px 50px 10px black inset;
   
 }
-/*Social Media scroll bar below*/
+/*Foundation Framework Social Media scroll bar below*/
 
 .sticky-social-bar {
   padding: 0;
@@ -295,6 +301,22 @@ body {
   background-color: inherit;
 }
 
+/*Blaze UI Framework code to hide Back-to-Top button*/
+blaze-back-to-top {
+  display:none
+}
+
+/*Media query for back-to-top button for smaller screen sizes*/
+@media (max-width: 920px) {
+  blaze-back-to-top {
+    display: block;
+  }
+}
+
+/*To make screen size responsive to smaller devices*/
+@media screen and (max-width: 920px) {
+
+}
 
 @media (max-width: 740px) {
   .box {

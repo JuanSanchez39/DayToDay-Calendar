@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="style.css">
     <!--Foundation Framework stylesheet link-->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
+    <!--Blaze UI Framework code-->
+    <script type="module" src="https://unpkg.com/@blaze/atoms@x.x.x/dist/blaze-atoms.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com@blaze/atoms@x.x.x/dist/blaze-atoms/blaze-atoms.js"></script>
   </head>
   <body>
     <audio autoplay loop id="test" src="./Interstellar  Melancholic Melody, Sleep Aid, Ambient Music.mp3"></audio>
@@ -81,14 +84,19 @@
 
       <button id="saveButton">Save</button>
       <button id="cancelButton">Cancel</button><br>
-      <!-- Potential Jump-To-Date Filter -->
+      <!-- Foundation Framework Potential Jump-To-Date Filter -->
       <ul class="mobile-app-filter-menu" data-mobile-app-filter-menu>
-        <li class="is-active"><a href="#">Day</a></li>
-        <li><a href="#">Month</a></li>
+        <p id="jumpToDate"></p>
+        <li class="is-active"><a href="#">Month</a></li>
+        <li><a href="#">Day</a></li>
         <li><a href="#">Year</a></li>
       </ul>
 
     </div>
+
+    <blaze-back-to-top position="left|center">
+      <button class="c-button c-button--info">Go back to top</button>
+    </blaze-back-to-top>
 
     <div id="deleteEventModal">
       <h2>Event</h2>
