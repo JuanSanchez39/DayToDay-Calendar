@@ -2,11 +2,11 @@ html{
   background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
   overflow-y: hidden;
 }
-/*For img, video, and container to stay responsive for smaller screens*/
+/*For img, video, and container to stay responsive for smaller screens
 img, video, #container {
   max-width: 100%;
   height: auto;
-}
+}*/
 
 body {
     display: flex;
@@ -313,10 +313,10 @@ blaze-back-to-top {
   }
 }
 
-/*To make screen size responsive to smaller devices*/
+/*To make screen size responsive to smaller devices
 @media screen and (max-width: 920px) {
 
-}
+}*/
 
 @media (max-width: 740px) {
   .box {
