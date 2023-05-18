@@ -1,113 +1,125 @@
-html{
-  background:linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
+html {
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(9, 46, 139, 1) 49%, rgba(0, 0, 0, 1) 87%);
   overflow-y: hidden;
 }
 
 body {
-    display: flex;
-    margin-top: 30px;
-    justify-content: center;
-    background: rgb(0,0,0);
-    background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(9,46,139,1) 49%, rgba(0,0,0,1) 87%);
-  }
+  display: flex;
+  margin-top: 30px;
+  justify-content: center;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(9, 46, 139, 1) 49%, rgba(0, 0, 0, 1) 87%);
+}
 
-  button {
-    width: 75px;
-    cursor: pointer;
-    box-shadow: 0px 0px 2px gray;
-    border: none;
-    outline: none;
-    padding: 5px;
-    border-radius: 5px;
-    color: black;
-  }
-  
-  #header {
-    padding: 10px;
-    color: white;
-    font-size: 36px;
-    font-family: sans-serif;
-    display: flex;
-    justify-content: space-between;
-    margin: 30px;
-  }
-  #header button {
-    background-color: lightblue;
-    margin-right: 100px;
+button {
+  width: 75px;
+  cursor: pointer;
+  box-shadow: 0px 0px 2px gray;
+  border: none;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  color: black;
+}
 
-  }
-  #container {
-    width: 770px;
-    
-  }
-  #weekdays {
-    width: 100%;
-    display: flex;
-    color: white;
-    margin: 45px;
-    font-size: larger;
-  }
-  
-  #weekdays div {
-    width: 100px;
-    padding: 10px;
-    
-  }
-  #calendar {
-    width: 100%;
-    margin: 50px;
-    display: flex;
-    flex-wrap: wrap;
-   cursor: pointer;
-  }
+#header {
+  padding: 10px;
+  color: white;
+  font-size: 36px;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: space-between;
+  margin: 30px;
+}
 
-  .day {
-    width: 100px;
-    padding: 10px;
-    height: 100px;
-    cursor: pointer;
-    box-sizing: border-box;
-    background-color: white;
-    margin: 3px;
-    box-shadow: 0px 0px 3px #CBD4C2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-radius: 5px;
-    border-style: solid;
-    box-shadow: 20px 20px 50px black;
-  }
-  .day:hover {
-    background-color: #e8faed;
-  }
-  
-  .day + #currentDay {
-    background-color:lightblue;
-  }
-  .event {
-    font-size: 10px;
-    padding: 3px;
-    background-color: #58bae4;
-    color: white;
-    border-radius: 5px;
-    max-height: 55px;
-    overflow: hidden;
-  }
-  /* Added custom date changer*/
-  
+#header button {
+  background-color: lightblue;
+  margin-right: 100px;
+
+}
+
+#container {
+  width: 825px;
+
+}
+
+#weekdays {
+  width: 100%;
+  display: flex;
+  color: white;
+  margin: 45px;
+  font-size: larger;
+
+}
+
+
+#weekdays div {
+  width: 105px;
+  padding: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+
+#calendar {
+  width: 100%;
+  margin: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  cursor: pointer;
+
+}
+
+.day {
+  width: 100px;
+  padding: 10px;
+  height: 100px;
+  cursor: pointer;
+  box-sizing: border-box;
+  background-color: white;
+  margin: 3px;
+  box-shadow: 0px 0px 3px #CBD4C2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 5px;
+  border-style: solid;
+  box-shadow: 20px 20px 50px black;
+}
+
+.day:hover {
+  background-color: #e8faed;
+}
+
+.day + #currentDay {
+  background-color: lightblue;
+}
+
+.event {
+  font-size: 10px;
+  padding: 3px;
+  background-color: #58bae4;
+  color: white;
+  border-radius: 5px;
+  max-height: 55px;
+  overflow: hidden;
+}
+
+/* Added custom date changer*/
+
 .mobile-app-filter-menu {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   list-style-type: none;
   -webkit-justify-content: space-around;
-      -ms-flex-pack: distribute;
-          justify-content: space-around;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
   margin: 0;
   height: 2.8125rem;
   -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
   border-top: 1px solid #cacaca;
   border-bottom: 1px solid #cacaca;
 }
@@ -121,64 +133,71 @@ body {
 }
 
 .padding {
-    cursor: default !important;
-    background-color: #FFFCFF !important;
-    box-shadow: none !important;
-  }
-  #newEventModal, #deleteEventModal {
-    display: none;
-    z-index: 20;
-    padding: 25px;
-    background-color: #e8f4fa;
-    box-shadow: 0px 0px 3px black;
-    border-radius: 5px;
-    width: 350px;
-    top: 100px;
-    left: calc(50% - 175px);
-    position: absolute;
-    font-family: sans-serif;
-  }
-  #eventTitleInput {
-    padding: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    margin-bottom: 25px;
-    border-radius: 3px;
-    outline: none;
-    border: none;
-    box-shadow: 0px 0px 3px gray;
-  }
-  #eventTitleInput.error {
-    border: 2px solid red;
-  }
-  #cancelButton, #deleteButton {
-    background-color: #d36c6c;
-  }
-  #saveButton, #closeButton {
-    background-color: #92a1d1;
-  }
-  #eventText {
-    font-size: 14px;
-  }
-  #modalBackDrop {
-    display: none;
-    top: 0px;
-    left: 0px;
-    z-index: 10;
-    width: 100vw;
-    height: 100vh;
-    position: absolute;
-    background-color: rgba(0,0,0,0.8);
-  }
+  cursor: default !important;
+  background-color: #FFFCFF !important;
+  box-shadow: none !important;
+}
 
-  /*added styling to NASA API data container*/
+#newEventModal, #deleteEventModal {
+  display: none;
+  z-index: 20;
+  padding: 25px;
+  background-color: #e8f4fa;
+  box-shadow: 0px 0px 3px black;
+  border-radius: 5px;
+  width: 350px;
+  top: 100px;
+  left: calc(50% - 175px);
+  position: absolute;
+  font-family: sans-serif;
+}
 
- .container2 {
+#eventTitleInput {
+  padding: 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 25px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  box-shadow: 0px 0px 3px gray;
+}
+
+#eventTitleInput.error {
+  border: 2px solid red;
+}
+
+#cancelButton, #deleteButton {
+  background-color: #d36c6c;
+}
+
+#saveButton, #closeButton {
+  background-color: #92a1d1;
+}
+
+#eventText {
+  font-size: 14px;
+}
+
+#modalBackDrop {
+  display: none;
+  top: 0px;
+  left: 0px;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/*added styling to NASA API data container*/
+
+.container2 {
   width: 70%;
   margin: 0 auto;
   text-align: center;
   margin-bottom: 2rem;
-  color:#CBD4C2;
+  color: #CBD4C2;
 }
 
 .picture-explanation-container {
@@ -204,8 +223,9 @@ body {
   border-style: solid black;
   border-radius: 7px;
   box-shadow: 20px 20px 50px 10px black inset;
-  
+
 }
+
 /*Social Media scroll bar below*/
 
 .sticky-social-bar {
@@ -213,8 +233,8 @@ body {
   margin: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
   width: 11.25rem;
   background-color: #333333;
   position: fixed;
@@ -286,8 +306,8 @@ body {
 
 .sticky-social-bar .social-icon:hover {
   -webkit-transform: translateX(8.75rem);
-      -ms-transform: translateX(8.75rem);
-          transform: translateX(8.75rem);
+  -ms-transform: translateX(8.75rem);
+  transform: translateX(8.75rem);
 }
 
 .sticky-social-bar .social-icon:hover > a {
@@ -301,6 +321,6 @@ body {
     width: 48%;
   }
 }
+
 /*Bulma Framework import code*/
 @import "https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css";
-
