@@ -218,7 +218,11 @@ const displayData = data => {
   document.getElementById('date').textContent = data.date
   document.getElementById('picture').src = data.hdurl
   document.getElementById('explanation').textContent = data.explanation
+  
 }
 
 fetchNASAData()
 
+document.addEventListener("click", () => {
+  document.getElementById("test").play();
+})
