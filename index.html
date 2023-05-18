@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Astronomy Calendar</title>
-
+    <!--Bulma Framework stylesheet link-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="style.css">
+    <!--Foundation Framework stylesheet link-->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet">
   </head>
   <body>
     <audio autoplay loop id="test" src="./Interstellar  Melancholic Melody, Sleep Aid, Ambient Music.mp3"></audio>
@@ -30,7 +33,46 @@
       </div>
 
       <div id="calendar"></div>
-    </div>
+      <!-- Social Media scroll bar -->
+        <ul class="sticky-social-bar">
+          <li class="social-icon">
+            <a href="https://www.facebook.com/"> 
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+              <span class="social-icon-text">Facebook</span>
+            </a>
+          </li>
+          <li class="social-icon">
+            <a href="https://www.twitter.com/">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+              <span class="social-icon-text">Twitter</span>
+            </a>
+          </li>
+          <li class="social-icon">
+            <a href="https://www.linkedin.com/">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+              <span class="social-icon-text">Linkedin</span>
+            </a>
+          </li>
+          <li class="social-icon">
+            <a href="https://www.youtube.com/">
+              <i class="fa fa-youtube" aria-hidden="true"></i>
+              <span class="social-icon-text">Youtube</span>
+            </a>
+          </li>
+          <li class="social-icon">
+            <a href="https://www.instagram.com/">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+              <span class="social-icon-text">Instagram</span>
+            </a>
+          </li>
+          <li class="social-icon">
+            <a href="pinterest.com">
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+              <span class="social-icon-text">Pinterest</span>
+            </a>
+          </li> 
+        </ul>
+      </div>
 
     <div id="newEventModal">
       <h2>New Event</h2>
@@ -38,7 +80,14 @@
       <input id="eventTitleInput" placeholder="Event Title" />
 
       <button id="saveButton">Save</button>
-      <button id="cancelButton">Cancel</button>
+      <button id="cancelButton">Cancel</button><br>
+      <!-- Potential Jump-To-Date Filter -->
+      <ul class="mobile-app-filter-menu" data-mobile-app-filter-menu>
+        <li class="is-active"><a href="#">Day</a></li>
+        <li><a href="#">Month</a></li>
+        <li><a href="#">Year</a></li>
+      </ul>
+
     </div>
 
     <div id="deleteEventModal">
@@ -58,7 +107,7 @@
       <h1 id="date"></h1>
       <img src="" id="picture" alt="astronomy image by NASA" />
       <section class="picture-explanation-container">
-        <h3 id="explanation"></h3>
+        <h1 id="explanation"></h1>
       </section>
     </main>
    
